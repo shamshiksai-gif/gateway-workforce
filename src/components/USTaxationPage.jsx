@@ -1,3 +1,5 @@
+import LearnMoreServicePanel from './LearnMoreServicePanel'
+
 const taxServices = [
   {
     title: 'Tax Preparation & Compliance',
@@ -47,23 +49,10 @@ const taxBenefits = [
 function USTaxationPage() {
   return (
     <section className="tax-page" id="us-taxation">
-      <section className="tax-hero">
-        <div className="tax-hero-copy">
-          <p className="eyebrow">Gateway Workforce:</p>
-          <h1>
-            Expert US Taxation
-            <br />& Accounting Services
-          </h1>
-          <p className="tax-scroll">Scroll Down</p>
-        </div>
-        <img
-          src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1400&q=80"
-          alt=""
-          loading="lazy"
-          decoding="async"
-          referrerPolicy="no-referrer"
-        />
-      </section>
+      <LearnMoreServicePanel slug="us-taxation" />
+      <p className="tax-scroll-below" aria-hidden="true">
+        Scroll for details
+      </p>
 
       <section className="tax-intro">
         <p className="tax-kicker">Precision Accounting Services</p>

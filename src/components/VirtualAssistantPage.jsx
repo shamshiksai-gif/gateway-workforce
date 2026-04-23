@@ -1,177 +1,237 @@
-const delegateTasks = [
-  'Calendar management',
-  'Inbox management',
-  'Meeting prep and follow-up',
-  'Travel coordination',
-  'Competitive and market intelligence',
-  'Recession-specific strategy support',
-  'Process documentation',
-  'Expense tracking',
-  'Cold email outreach',
-  'Research and vendor support',
-  'Project coordination',
-  'Relationship management',
-  'File and document organization',
-  'Light bookkeeping support',
-  'Task tracking and reminders',
-  'Gift or appreciation coordination',
-  'Internal dashboard updates',
-  'Software/tool vetting',
-  'Social media scheduling',
-  'Team communication support',
-  'Document editing and proofreading',
-]
-
-const processSteps = [
-  ['Step 1', 'Sales Call', 'Identify your exact needs and ideal assistant profile.'],
-  ['Step 2', 'Discovery Call', 'Deep dive into tasks, tools, and culture fit.'],
-  ['Step 3', 'Placement Process', 'We vet and shortlist top India-based candidates.'],
-  ['Step 4', 'Kickoff Call', 'You meet your VA and set goals and communication plans.'],
-  ['Step 5', 'Onboarding', 'Guided onboarding with your success consultant.'],
-  ['Step 6', 'Nurturing', 'Ongoing check-ins and support throughout the partnership.'],
-]
+import LearnMoreServicePanel from './LearnMoreServicePanel'
+import {
+  vaHero,
+  vaProfessional,
+  vaCategories,
+  vaAdministrative,
+  vaDelegateIntro,
+  vaTasks,
+  vaDelegateCta,
+  vaChallenges,
+  vaWhyChoose,
+  vaProcess,
+  vaAudience,
+  vaDifference,
+  vaClosing,
+} from '../data/vaPageContent'
+import { VaBenefitIcon, VaProcessIcon, VaDiffIcon, VaWhyIcon } from './VaPageIcons'
 
 function VirtualAssistantPage() {
   return (
     <section className="va-page" id="virtual-assistant">
-      <section className="va-hero">
-        <p className="eyebrow">Virtual Assistant Background</p>
-        <h1>Hire a Virtual Assistant Expert at just $6</h1>
-        <p className="va-sub">Accomplish More. Juggle Less.</p>
-        <a href="#contact" className="va-primary-btn">
+      <LearnMoreServicePanel slug="virtual-assistant" />
+
+      <div className="va-block va-block--hero">
+        <h1 className="va-hero-h1">
+          {vaHero.titleBefore}
+          <span className="va-hero-price">{vaHero.price}</span>
+        </h1>
+        <div className="va-hero-line" aria-hidden="true" />
+        <p className="va-hero-sub">{vaHero.sub}</p>
+        <a className="va-btn-primary" href="#contact">
           Hire Gateway
         </a>
-      </section>
-
-      <section className="va-pillars">
-        <article>
-          <h3>India-Based</h3>
-          <p>
-            We search the entire country for a virtual assistant to find the right person for your
-            organization.
-          </p>
-        </article>
-        <article>
-          <h3>Highly Vetted</h3>
-          <p>
-            Our recruiting process includes multiple video interviews and skills assessments to
-            select talented, hard-working candidates.
-          </p>
-        </article>
-      </section>
-
-      <section className="va-challenges">
-        <h2>What Challenges Are Limiting Your Growth?</h2>
-        <div className="va-grid-3">
-          <article>
-            <h3>Lack of Time</h3>
-            <p>Stretched too thin to hire support or focus on strategic growth?</p>
-          </article>
-          <article>
-            <h3>Unanswered Calls & Emails</h3>
-            <p>Missing important opportunities and client communication?</p>
-          </article>
-          <article>
-            <h3>Missed Projects & Deadlines</h3>
-            <p>Too many moving parts creating chaos and delayed execution?</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="va-services">
-        <h2>Professional Virtual Assistant Services</h2>
-        <p>Gateway services provide a wide variety of delegated support solutions.</p>
-        <div className="va-cats">
-          <span>Administrative Tasks</span>
-          <span>Operational Tasks</span>
-          <span>Financial Tasks</span>
-          <span>Personal Tasks</span>
-          <span>Marketing Tasks</span>
-        </div>
-      </section>
-
-      <section className="va-delegate">
-        <h2>Essential Tasks You Can Delegate to Virtual Assistants</h2>
-        <p>
-          Delegation helps you grow your business. To get started, here are commonly delegated
-          tasks you can hand over today.
-        </p>
-        <ol>
-          {delegateTasks.map((task, i) => (
-            <li key={task}>
-              <strong>{i + 1}.</strong> {task}
-            </li>
-          ))}
-        </ol>
-        <div className="va-inline-cta">
-          <h3>Ready to Delegate and Focus on What Matters Most?</h3>
-          <p>
-            Let our skilled assistants handle these critical tasks so you can focus on growth and
-            high-impact work.
-          </p>
-          <div className="va-inline-actions">
-            <a href="#contact">Get Started Today</a>
-            <a href="#contact">Learn More About Our Services</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="va-process">
-        <h2>Our Virtual Assistant Process</h2>
-        <div className="va-process-grid">
-          {processSteps.map(([step, title, text]) => (
-            <article key={step}>
-              <p className="va-step">{step}</p>
-              <h3>{title}</h3>
-              <p>{text}</p>
+        <div className="va-pillars">
+          {vaHero.pillars.map((p) => (
+            <article key={p.kicker} className="va-glass-card va-pillar-card">
+              <p className="va-pillar-kicker">{p.kicker}</p>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
             </article>
           ))}
         </div>
-      </section>
+      </div>
 
-      <section className="va-diff">
-        <h2>The Gateway Difference</h2>
-        <div className="va-grid-3">
-          <article>
-            <h3>Indian-Based Professionals</h3>
-            <p>Vetted professionals with proven experience.</p>
-          </article>
-          <article>
-            <h3>No Overhead Costs</h3>
-            <p>Remote model helps keep operating costs low.</p>
-          </article>
-          <article>
-            <h3>Managed Onboarding</h3>
-            <p>We guide you through onboarding and ongoing support.</p>
-          </article>
-        </div>
-        <div className="va-audience">
-          <h3>Who can use our Virtual Assistant Services?</h3>
-          <p>
-            Executives, small businesses, church leaders, sales teams, attorneys, consultants,
-            entrepreneurs, photographers, authors, and more.
-          </p>
-        </div>
-      </section>
+      <div className="va-block">
+        <h2 className="va-h2">{vaProfessional.title}</h2>
+        <p className="va-lead">{vaProfessional.lead}</p>
+        <div className="va-gradient-rule" aria-hidden="true" />
 
-      <section className="va-bottom">
-        <h2>Stop spending countless hours every week on tasks someone else can do for you.</h2>
-        <p>
-          Contact us today to discover how you can reclaim your schedule, focus on what matters,
-          and achieve the growth you deserve.
-        </p>
-        <a href="#contact">Hire Gateway</a>
-        <div className="va-long-copy">
-          <h3>Why Choose Gateway Workforce for Virtual Assistant Services?</h3>
-          <p>
-            The details in your organization must be handled, but you are not always the best
-            person to handle them. Gateway&apos;s AI-empowered virtual assistant services are
-            pre-vetted and intentionally matched to your workflows so you gain time, focus, and
-            consistency. Our standards are high, our acceptance rate is extremely selective, and
-            our team supports you with flexible plans and ongoing guidance.
-          </p>
+        <div className="va-prof-layout">
+          <nav className="va-cat-sidebar" aria-label="Service categories">
+            {vaCategories.map((c, i) => (
+              <div
+                key={c}
+                className={`va-cat-item${i === vaCategories.length - 1 ? ' is-active' : ''}`}
+              >
+                <span className="va-cat-item-label">{c}</span>
+                <span className="va-cat-item-dot" aria-hidden="true" />
+              </div>
+            ))}
+          </nav>
+
+          <div className="va-admin-panel va-glass-card">
+            <div className="va-admin-split">
+              <div className="va-admin-image">
+                <img
+                  src={vaAdministrative.image}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="va-admin-body">
+                <h3 className="va-admin-h3">{vaAdministrative.title}</h3>
+                <ul className="va-admin-list">
+                  {vaAdministrative.points.map((pt) => (
+                    <li key={pt}>{pt}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+
+      <div className="va-block" id="va-essential-tasks">
+        <h2 className="va-h2">{vaDelegateIntro.title}</h2>
+        <p className="va-lead va-lead--narrow">{vaDelegateIntro.lead}</p>
+        <div className="va-benefit-pill">
+          <ul className="va-benefit-strip">
+            {vaDelegateIntro.benefits.map((b) => (
+              <li key={b.key} className="va-benefit-item">
+                <span className={`va-benefit-ic va-benefit-ic--${b.icon}`} aria-hidden="true">
+                  <VaBenefitIcon name={b.icon} />
+                </span>
+                <span>{b.label}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="va-task-grid">
+          {vaTasks.map((t) => (
+            <article key={t.n} className="va-task-card">
+              <div className="va-task-top">
+                <span className="va-task-badge">{t.n}</span>
+                <h3 className="va-task-title">{t.title}</h3>
+              </div>
+              <p className="va-task-text">{t.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="va-block va-block--cta-mid">
+        <h2 className="va-h2">{vaDelegateCta.title}</h2>
+        <p className="va-lead va-lead--narrow">{vaDelegateCta.lead}</p>
+        <div className="va-mid-actions">
+          <a className="va-btn-primary" href="#contact">
+            {vaDelegateCta.primary}
+          </a>
+          <a className="va-btn-ghost" href="#va-essential-tasks">
+            {vaDelegateCta.secondary}
+          </a>
+        </div>
+      </div>
+
+      <div className="va-block">
+        <h2 className="va-h2">{vaChallenges.title}</h2>
+        <div className="va-challenge-grid">
+          {vaChallenges.items.map((c) => (
+            <article key={c.key} className="va-glass-card va-challenge-card">
+              <div className="va-challenge-img">
+                <img src={c.image} alt="" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
+              </div>
+              <h3>{c.title}</h3>
+              <p>{c.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="va-block">
+        <h2 className="va-h2">{vaWhyChoose.title}</h2>
+        <div className="va-why-grid">
+          <div className="va-glass-card va-why-col">
+            <div className="va-why-icon va-why-icon--chart" aria-hidden="true">
+              <VaWhyIcon name="chart" />
+            </div>
+            {vaWhyChoose.left.paras.map((p, i) => (
+              <p key={`l-${i}`}>{p}</p>
+            ))}
+            <p className="va-why-hl va-why-hl--amber">{vaWhyChoose.left.highlight1}</p>
+            {vaWhyChoose.left.paras2.map((p, i) => (
+              <p key={`l2-${i}`}>{p}</p>
+            ))}
+            <p className="va-why-hl va-why-hl--red">{vaWhyChoose.left.highlight2}</p>
+          </div>
+          <div className="va-glass-card va-why-col">
+            <div className="va-why-icon va-why-icon--shield" aria-hidden="true">
+              <VaWhyIcon name="shield" />
+            </div>
+            {vaWhyChoose.right.paras.map((p, i) => (
+              <p key={`r-${i}`}>{p}</p>
+            ))}
+            <p className="va-why-hl va-why-hl--teal">{vaWhyChoose.right.highlight}</p>
+            <p>{vaWhyChoose.right.closing}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="va-block">
+        <h2 className="va-h2">{vaProcess.title}</h2>
+        <p className="va-lead va-lead--narrow">{vaProcess.sub}</p>
+        <div className="va-process-grid">
+          {vaProcess.steps.map((s) => (
+            <article key={s.key} className="va-glass-card va-step-card">
+              <div className="va-step-ico" aria-hidden="true">
+                <VaProcessIcon name={s.icon} />
+              </div>
+              <p className="va-step-label">
+                {s.step}. {s.name}
+              </p>
+              <p className="va-step-text">{s.text}</p>
+            </article>
+          ))}
+        </div>
+        <a className="va-btn-primary va-process-hire" href="#contact">
+          Hire Gateway
+        </a>
+      </div>
+
+      <div className="va-block">
+        <h2 className="va-h2">{vaAudience.title}</h2>
+        <div className="va-audience-grid">
+          {vaAudience.people.map((p) => (
+            <div key={p} className="va-audience-cell">
+              {p}
+            </div>
+          ))}
+        </div>
+        <p className="va-audience-foot">{vaAudience.foot}</p>
+      </div>
+
+      <div className="va-block va-block--diff">
+        <p className="va-diff-kicker">{vaDifference.kicker}</p>
+        <h2 className="va-h2">
+          {vaDifference.title} <span className="va-diff-em">{vaDifference.titleAccent}</span>
+        </h2>
+        <p className="va-lead va-lead--narrow">{vaDifference.sub}</p>
+        <a className="va-btn-primary" href="#contact">
+          Hire Gateway
+        </a>
+        <div className="va-diff-grid">
+          {vaDifference.cards.map((c) => (
+            <article key={c.key} className="va-glass-card va-diff-card">
+              <div className="va-diff-ico" aria-hidden="true">
+                <VaDiffIcon name={c.icon} />
+              </div>
+              <h3>{c.title}</h3>
+              <p>{c.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="va-block va-block--closing">
+        <h2 className="va-h2">{vaClosing.title}</h2>
+        <p className="va-lead va-lead--narrow">{vaClosing.sub}</p>
+        <a className="va-btn-primary" href="#contact">
+          {vaClosing.cta}
+        </a>
+      </div>
     </section>
   )
 }

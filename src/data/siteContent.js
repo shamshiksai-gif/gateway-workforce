@@ -91,9 +91,11 @@ export const whyIndiaPoints = [
 /**
  * Each service = one full-width panel (text left, image right), like gatewayworkforce.com service pages.
  * `theme` maps to `service-panel--{theme}` in CSS.
+ * `slug` links home slides + “Learn more” pages. Put your art in `public/learn-more/{slug}.jpg` and set `image` to that path.
  */
 export const services = [
   {
+    slug: 'it-outsourcing',
     name: 'IT Outsourcing',
     theme: 'azure',
     bullets: [
@@ -101,12 +103,13 @@ export const services = [
       'Empower your digital growth with agile, cross-functional teams tailored to your project needs.',
       'We deliver high-quality, scalable solutions that accelerate time-to-market and drive business impact.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/it-outsourcing.svg',
+    imageFocus: 'center 42%',
     cta: 'Learn more',
     href: '/IT_Outsourcing/',
   },
   {
+    slug: 'healthcare-bpo',
     name: 'Healthcare BPO',
     theme: 'violet',
     bullets: [
@@ -114,12 +117,13 @@ export const services = [
       'Streamline your revenue cycle with accurate billing and seamless virtual care services.',
       'Reduce denials and improve collections with process-driven healthcare operations teams.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/healthcare-bpo.svg',
+    imageFocus: 'center 40%',
     cta: 'Learn more',
     href: '/Healthcare_BPO/',
   },
   {
+    slug: 'us-taxation',
     name: 'US Taxation',
     theme: 'midnight',
     bullets: [
@@ -127,12 +131,13 @@ export const services = [
       'Ensure financial precision and regulatory adherence with our expert-led services.',
       'We help streamline bookkeeping, reporting, and tax workflows for maximum efficiency and peace of mind.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/us-taxation.svg',
+    imageFocus: 'center 48%',
     cta: 'Learn more',
     href: '/US_Taxation/',
   },
   {
+    slug: 'cloud-solutions',
     name: 'Cloud Solutions',
     theme: 'teal',
     bullets: [
@@ -140,12 +145,13 @@ export const services = [
       'Seamlessly deploy, scale, and manage applications across leading cloud platforms.',
       'Our experts ensure secure migration, cost optimization, and high availability for your infrastructure.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/cloud-solutions.svg',
+    imageFocus: 'center 40%',
     cta: 'Learn more',
     href: '/cloud-solutions/',
   },
   {
+    slug: 'saas-experts',
     name: 'SaaS Experts',
     theme: 'coral',
     bullets: [
@@ -153,12 +159,13 @@ export const services = [
       'Unify your CRM, e-commerce, and marketing platforms for seamless operations.',
       'We tailor integrations to boost productivity, enhance customer experience, and drive revenue growth.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/saas-experts.svg',
+    imageFocus: 'center 45%',
     cta: 'Learn more',
     href: '/Saas_Experts/',
   },
   {
+    slug: 'ai-solutions',
     name: 'AI Solutions',
     theme: 'indigo',
     bullets: [
@@ -166,12 +173,13 @@ export const services = [
       'Build tailored AI solutions to streamline workflows and uncover deep insights.',
       'Leverage automation and large language models to drive smart, data-led decisions.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/ai-solutions.svg',
+    imageFocus: 'center 42%',
     cta: 'Learn more',
     href: '/AI_Solutions/',
   },
   {
+    slug: 'virtual-assistant',
     name: 'Virtual Assistant',
     theme: 'emerald',
     bullets: [
@@ -179,12 +187,16 @@ export const services = [
       'Delegate routine tasks and focus on strategic growth.',
       'Our skilled assistants handle scheduling, research, communication, and project coordination with precision.',
     ],
-    image:
-      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&h=720&q=82',
+    image: '/learn-more/virtual-assistant.svg',
+    imageFocus: 'center 40%',
     cta: 'Learn more',
     href: '/virtual-assistant/',
   },
 ]
+
+export function getServiceBySlug(slug) {
+  return services.find((s) => s.slug === slug) ?? null
+}
 
 /** Light “hero” panel inside hiring section (gatewayworkforce.com reference). */
 export const hiringProcessLight = {

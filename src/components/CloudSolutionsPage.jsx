@@ -1,3 +1,5 @@
+import LearnMoreServicePanel from './LearnMoreServicePanel'
+
 const cloudServices = [
   {
     title: 'Cloud Deployment & Architecture',
@@ -48,29 +50,16 @@ const cloudBenefits = [
 function CloudSolutionsPage() {
   return (
     <section className="cloud-page" id="cloud-solutions">
-      <section className="cloud-hero">
-        <div className="cloud-hero-copy">
-          <p className="eyebrow">Cloud Solutions Excellence</p>
-          <h1>Transform with Cloud Excellence</h1>
-          <h2>AWS & Azure Migration Experts</h2>
-          <p>
-            Accelerate your digital transformation with our expert cloud migration, optimization,
-            and SaaS development services.
-          </p>
-          <div className="cloud-badges">
-            <span>99.9% Uptime</span>
-            <span>24/7 Support</span>
-            <span>Auto-Scaling</span>
-            <span>Cost Optimization</span>
-          </div>
-          <div className="cloud-actions">
-            <a href="#contact">Start Migration</a>
-            <a href="#cloud-services" className="secondary">
-              View Case Studies
-            </a>
-          </div>
-        </div>
-      </section>
+      <LearnMoreServicePanel slug="cloud-solutions" />
+      <p className="cloud-scroll-below" aria-hidden="true">
+        Scroll for details
+      </p>
+      <div className="cloud-actions cloud-after-learn">
+        <a href="#contact">Start Migration</a>
+        <a href="#cloud-services" className="secondary">
+          View services
+        </a>
+      </div>
 
       <section className="cloud-about">
         <p className="cloud-kicker">About Us</p>

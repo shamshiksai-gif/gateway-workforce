@@ -129,7 +129,12 @@ function App() {
       {showWelcomeIntro ? <WelcomeIntro phase={welcomePhase} isExiting={isWelcomeExiting} /> : null}
       <AmbientGraphics />
       <div className="page-shell">
-        <Navbar links={pageNavLinks} isScrollActive={isScrollActive} />
+        <Navbar
+          links={pageNavLinks}
+          isScrollActive={isScrollActive}
+          serviceMenu={services}
+          brandHomeHref={isServiceDetailPage ? '/' : '#home'}
+        />
         <main>
           {isItOutsourcingPage ? (
             <ITOutsourcingPage />
@@ -174,7 +179,7 @@ function App() {
           services={services}
           isScrollActive={isScrollActive}
         />
-        {!isServiceDetailPage ? <FloatingScheduleCta isScrollActive={isScrollActive} /> : null}
+        <FloatingScheduleCta isScrollActive={isScrollActive} />
       </div>
     </>
   )
