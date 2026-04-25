@@ -124,6 +124,16 @@ function App() {
     }
   }, [showWelcomeIntro])
 
+  useEffect(() => {
+    const root = document.documentElement
+    if (isServiceDetailPage) {
+      root.classList.add('gw-ref-site')
+    } else {
+      root.classList.remove('gw-ref-site')
+    }
+    return () => root.classList.remove('gw-ref-site')
+  }, [isServiceDetailPage])
+
   return (
     <>
       {showWelcomeIntro ? <WelcomeIntro phase={welcomePhase} isExiting={isWelcomeExiting} /> : null}

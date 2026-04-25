@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
   --font-sans: 'Plus Jakarta Sans', Inter, 'Segoe UI', system-ui, -apple-system, sans-serif;
+  /* gatewayworkforce.com “Learn more” reference pairing */
+  --font-ref-display: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --font-ref-body: 'Open Sans', 'Segoe UI', system-ui, sans-serif;
   --dash-bg: #010409;
   --dash-bg-mid: #020617;
   --dash-glow: #1d4ed8;
@@ -14,6 +17,88 @@
   --accent: #2dd4bf;
   --nav-pill-bg: rgba(226, 232, 240, 0.94);
   --max-width: 1220px;
+}
+
+/* “Learn more” + service URL routes: match gatewayworkforce.com typography (set on <html> in App.jsx) */
+html.gw-ref-site,
+html.gw-ref-site #root,
+html.gw-ref-site .page-shell {
+  font-family: var(--font-ref-body);
+  font-size: 16px;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.gw-ref-site :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-ref-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  font-synthesis: none;
+}
+
+html.gw-ref-site :is(
+    p,
+    li,
+    label,
+    input,
+    select,
+    textarea,
+    .service-panel-list,
+    .section-description
+  ) {
+  font-family: var(--font-ref-body);
+}
+
+html.gw-ref-site .eyebrow,
+html.gw-ref-site [class*='eyebrow'] {
+  font-family: var(--font-ref-display);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+html.gw-ref-site .it-pill,
+html.gw-ref-site .hbpo-pill,
+html.gw-ref-site .saas-pill,
+html.gw-ref-site .ai-pill,
+html.gw-ref-site .va-pillar-kicker {
+  font-family: var(--font-ref-display);
+}
+
+html.gw-ref-site .nav-pill,
+html.gw-ref-site .nav-pill a,
+html.gw-ref-site .nav-pill button {
+  font-family: var(--font-ref-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+html.gw-ref-site .service-panel-title {
+  font-family: var(--font-ref-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+  font-size: clamp(1.85rem, 2.55vw, 2.65rem);
+}
+
+html.gw-ref-site .service-panel-list {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+html.gw-ref-site .it-page,
+html.gw-ref-site .hbpo-page,
+html.gw-ref-site .tax-page,
+html.gw-ref-site .cloud-page,
+html.gw-ref-site .saas-page,
+html.gw-ref-site .ai-page,
+html.gw-ref-site .va-page,
+html.gw-ref-site .learn-more-hero {
+  font-family: var(--font-ref-body);
 }
 
 html {
