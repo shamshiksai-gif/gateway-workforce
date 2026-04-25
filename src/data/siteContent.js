@@ -103,7 +103,8 @@ export const services = [
       'Empower your digital growth with agile, cross-functional teams tailored to your project needs.',
       'We deliver high-quality, scalable solutions that accelerate time-to-market and drive business impact.',
     ],
-    image: '/learn-more/it-outsourcing.svg',
+    image:
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 42%',
     cta: 'Learn more',
     href: '/IT_Outsourcing/',
@@ -117,7 +118,8 @@ export const services = [
       'Streamline your revenue cycle with accurate billing and seamless virtual care services.',
       'Reduce denials and improve collections with process-driven healthcare operations teams.',
     ],
-    image: '/learn-more/healthcare-bpo.svg',
+    image:
+      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 40%',
     cta: 'Learn more',
     href: '/Healthcare_BPO/',
@@ -131,7 +133,8 @@ export const services = [
       'Ensure financial precision and regulatory adherence with our expert-led services.',
       'We help streamline bookkeeping, reporting, and tax workflows for maximum efficiency and peace of mind.',
     ],
-    image: '/learn-more/us-taxation.svg',
+    image:
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 48%',
     cta: 'Learn more',
     href: '/US_Taxation/',
@@ -145,7 +148,8 @@ export const services = [
       'Seamlessly deploy, scale, and manage applications across leading cloud platforms.',
       'Our experts ensure secure migration, cost optimization, and high availability for your infrastructure.',
     ],
-    image: '/learn-more/cloud-solutions.svg',
+    image:
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 40%',
     cta: 'Learn more',
     href: '/cloud-solutions/',
@@ -159,7 +163,8 @@ export const services = [
       'Unify your CRM, e-commerce, and marketing platforms for seamless operations.',
       'We tailor integrations to boost productivity, enhance customer experience, and drive revenue growth.',
     ],
-    image: '/learn-more/saas-experts.svg',
+    image:
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 45%',
     cta: 'Learn more',
     href: '/Saas_Experts/',
@@ -173,7 +178,8 @@ export const services = [
       'Build tailored AI solutions to streamline workflows and uncover deep insights.',
       'Leverage automation and large language models to drive smart, data-led decisions.',
     ],
-    image: '/learn-more/ai-solutions.svg',
+    image:
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 42%',
     cta: 'Learn more',
     href: '/AI_Solutions/',
@@ -187,7 +193,8 @@ export const services = [
       'Delegate routine tasks and focus on strategic growth.',
       'Our skilled assistants handle scheduling, research, communication, and project coordination with precision.',
     ],
-    image: '/learn-more/virtual-assistant.svg',
+    image:
+      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1100&h=720&q=82',
     imageFocus: 'center 40%',
     cta: 'Learn more',
     href: '/virtual-assistant/',

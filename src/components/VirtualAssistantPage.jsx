@@ -113,19 +113,6 @@ function VirtualAssistantPage() {
         </div>
       </div>
 
-      <div className="va-block va-block--cta-mid">
-        <h2 className="va-h2">{vaDelegateCta.title}</h2>
-        <p className="va-lead va-lead--narrow">{vaDelegateCta.lead}</p>
-        <div className="va-mid-actions">
-          <a className="va-btn-primary" href="#contact">
-            {vaDelegateCta.primary}
-          </a>
-          <a className="va-btn-ghost" href="#va-essential-tasks">
-            {vaDelegateCta.secondary}
-          </a>
-        </div>
-      </div>
-
       <div className="va-block">
         <h2 className="va-h2">{vaChallenges.title}</h2>
         <div className="va-challenge-grid">
@@ -225,13 +212,14 @@ function VirtualAssistantPage() {
         </div>
       </div>
 
-      <div className="va-block va-block--closing">
-        <h2 className="va-h2">{vaClosing.title}</h2>
-        <p className="va-lead va-lead--narrow">{vaClosing.sub}</p>
+      <div className="va-closing-clean">
+        <h2>{vaClosing.title}</h2>
+        <p>{vaClosing.sub}</p>
         <a className="va-btn-primary" href="#contact">
           {vaClosing.cta}
         </a>
       </div>
+
     </section>
   )
 }

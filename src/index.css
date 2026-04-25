@@ -26,8 +26,26 @@ html.gw-ref-site .page-shell {
   font-family: var(--font-ref-body);
   font-size: 16px;
   line-height: 1.625;
+  color: #334155;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html.gw-ref-site body {
+  background: #f1f5f9;
+  background-attachment: scroll;
+}
+
+html.gw-ref-site body::before,
+html.gw-ref-site body::after,
+html.gw-ref-site .ambient-layer {
+  display: none;
+}
+
+html.gw-ref-site .page-shell {
+  width: 100%;
+  margin: 0;
+  max-width: none;
 }
 
 html.gw-ref-site :is(h1, h2, h3, h4, h5, h6) {
@@ -73,8 +91,24 @@ html.gw-ref-site .nav-pill a,
 html.gw-ref-site .nav-pill button {
   font-family: var(--font-ref-display);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.84rem;
   letter-spacing: 0.02em;
+}
+
+html.gw-ref-site .nav-pill {
+  background: #eceff1;
+  border: 1.5px solid rgba(17, 24, 39, 0.78);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+}
+
+html.gw-ref-site .nav-pill-wrap {
+  top: 14px;
+  max-width: min(92vw, 760px);
+}
+
+html.gw-ref-site .nav-pill__topLink,
+html.gw-ref-site .nav-pill__servicesTrigger {
+  color: #334155;
 }
 
 html.gw-ref-site .service-panel-title {
@@ -82,12 +116,55 @@ html.gw-ref-site .service-panel-title {
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1.1;
-  font-size: clamp(1.85rem, 2.55vw, 2.65rem);
+  font-size: clamp(2rem, 2.8vw, 2.85rem);
 }
 
 html.gw-ref-site .service-panel-list {
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+html.gw-ref-site .learn-more-hero {
+  margin-top: clamp(54px, 6vh, 72px);
+  min-height: min(74vh, 690px);
+  height: min(74vh, 690px);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+html.gw-ref-site .learn-more-hero .service-panel {
+  min-height: min(74vh, 690px);
+  height: min(74vh, 690px);
+  padding: clamp(22px, 3.4vh, 36px) clamp(14px, 3vw, 28px);
+}
+
+html.gw-ref-site .learn-more-hero .service-panel-inner {
+  width: min(1280px, 94vw);
+}
+
+html.gw-ref-site :is(
+    .hbpo-scroll-below,
+    .tax-scroll-below,
+    .cloud-scroll-below,
+    .saas-scroll-below,
+    .ai-scroll-below
+  ) {
+  color: #64748b;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+html.gw-ref-site :is(
+    .it-page,
+    .hbpo-page,
+    .tax-page,
+    .cloud-page,
+    .saas-page,
+    .ai-page,
+    .va-page
+  ) {
+  color: #334155;
 }
 
 html.gw-ref-site .it-page,
@@ -1503,25 +1580,29 @@ h1 {
 
 .it-bottom-cta {
   margin-top: 8px;
-  background: linear-gradient(180deg, rgba(16, 35, 63, 0.78) 0%, rgba(30, 41, 59, 0.8) 100%);
-  border: 1px solid rgba(125, 211, 252, 0.1);
-  border-radius: 0 0 20px 20px;
-  padding: 40px 18px 48px;
+  background: #1e2d45;
+  border: none;
+  border-radius: 0;
+  padding: 56px 18px 52px;
   text-align: center;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.15);
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 .it-bottom-cta h3 {
   margin: 0;
   color: #f8fafc;
-  font-size: clamp(1.8rem, 3.3vw, 3rem);
+  font-size: clamp(2.25rem, 4.2vw, 3.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
 .it-bottom-cta p {
-  margin: 12px auto 0;
-  max-width: 68ch;
-  color: #dbeafe;
+  margin: 14px auto 0;
+  max-width: 72ch;
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .it-bottom-discuss {
@@ -1546,14 +1627,15 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 16px;
-  padding: 12px 24px;
-  border-radius: 12px;
-  color: #fff;
+  margin-top: 18px;
+  padding: 13px 28px;
+  border-radius: 9px;
+  color: #f8fafc;
   font-weight: 700;
-  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  font-size: 1.02rem;
+  background: #1ba2e4;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.35);
+  box-shadow: none;
 }
 
 .it-bottom-btn-ico {
@@ -1562,11 +1644,12 @@ h1 {
 }
 
 .it-bottom-tagline {
-  margin: 24px 0 0;
+  margin: 30px auto 0;
   padding-top: 20px;
-  border-top: 1px solid rgba(148, 163, 184, 0.25);
-  color: #94a3b8;
-  font-size: 0.9rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  color: #aab6c5;
+  font-size: 0.95rem;
+  max-width: 700px;
 }
 
 .hbpo-page {
@@ -1582,11 +1665,11 @@ h1 {
   min-height: min(72vh, 640px);
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  border-radius: 20px;
+  border-radius: 0;
   overflow: hidden;
-  margin-top: clamp(72px, 9vh, 104px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(125, 211, 252, 0.15);
+  margin-top: clamp(56px, 7vh, 76px);
+  box-shadow: none;
+  border: none;
 }
 
 .hbpo-hero--legacy {
@@ -2052,13 +2135,13 @@ h1 {
 
 .hbpo-bottom {
   margin-top: 20px;
-  border-radius: 18px;
-  padding: 36px 18px 44px;
+  border-radius: 0;
+  padding: 56px 18px 52px;
   text-align: center;
-  background: linear-gradient(175deg, rgba(6, 182, 212, 0.88) 0%, rgba(14, 165, 233, 0.9) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(10px);
+  background: #14a3d9;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .hbpo-bottom h2,
@@ -2067,15 +2150,16 @@ h1 {
 }
 
 .hbpo-bottom h2 {
-  font-size: clamp(1.65rem, 2.8vw, 2.5rem);
-  line-height: 1.2;
+  font-size: clamp(2.15rem, 4vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
 .hbpo-bottom p {
-  margin: 10px auto 0;
-  max-width: 64ch;
-  line-height: 1.55;
-  font-size: 1.02rem;
+  margin: 14px auto 0;
+  max-width: 72ch;
+  line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 .hbpo-bottom-discuss {
@@ -2099,14 +2183,15 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 16px;
-  padding: 12px 26px;
+  margin-top: 18px;
+  padding: 13px 28px;
   background: #fff;
   color: #0284c7;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-size: 1.02rem;
+  border-radius: 9px;
+  box-shadow: none;
 }
 
 .hbpo-bottom-btn-ico {
@@ -4133,6 +4218,158 @@ h1 {
   font-size: 0.92rem;
 }
 
+/* Virtual Assistant learn-more: premium navy palette (colors only; layout unchanged) */
+html.gw-ref-site .va-page {
+  color: #d8e4f3;
+  background:
+    radial-gradient(ellipse 86% 48% at 12% -2%, rgba(14, 116, 144, 0.05) 0%, transparent 56%),
+    radial-gradient(ellipse 70% 42% at 94% 24%, rgba(37, 99, 235, 0.04) 0%, transparent 56%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f7 44%, #e5ebf3 100%);
+}
+
+html.gw-ref-site .va-page .learn-more-hero.service-panel--emerald {
+  background:
+    radial-gradient(circle at 78% 42%, rgba(56, 189, 248, 0.1) 0%, transparent 30%),
+    linear-gradient(126deg, #0f172a 0%, #1b2f4b 42%, #1f4f87 72%, #0ea5e9 100%);
+}
+
+html.gw-ref-site .va-page .learn-more-hero .service-panel-title,
+html.gw-ref-site .va-page .learn-more-hero .service-panel-list {
+  color: rgba(248, 250, 252, 0.98);
+}
+
+html.gw-ref-site .va-page .learn-more-hero .eyebrow {
+  color: #bfdbfe;
+}
+
+html.gw-ref-site .va-page .va-block {
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.84) 0%, rgba(23, 37, 60, 0.8) 100%);
+  border-color: rgba(100, 116, 139, 0.3);
+  box-shadow:
+    0 20px 52px rgba(15, 23, 42, 0.32),
+    inset 0 1px 0 rgba(226, 232, 240, 0.05);
+}
+
+html.gw-ref-site .va-page .va-glass-card {
+  border-color: rgba(148, 163, 184, 0.22);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.5) 0%, rgba(10, 15, 30, 0.56) 100%);
+}
+
+html.gw-ref-site .va-page .va-hero-price {
+  color: #fbbf24;
+}
+
+html.gw-ref-site .va-page .va-hero-line {
+  background: linear-gradient(90deg, #38bdf8, #0284c7);
+}
+
+html.gw-ref-site .va-page .va-gradient-rule {
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+}
+
+html.gw-ref-site .va-page .va-btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 60%, #075985 100%);
+  box-shadow: 0 10px 26px rgba(3, 105, 161, 0.35);
+}
+
+html.gw-ref-site .va-page .va-btn-ghost {
+  color: #dbeafe;
+  border-color: rgba(148, 163, 184, 0.42);
+  background: rgba(15, 23, 42, 0.42);
+}
+
+html.gw-ref-site .va-page .va-pillar-kicker {
+  color: #7dd3fc;
+}
+
+html.gw-ref-site .va-page .va-cat-item.is-active {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  border-color: rgba(125, 211, 252, 0.5);
+  box-shadow: 0 8px 26px rgba(14, 165, 233, 0.28);
+}
+
+html.gw-ref-site .va-page .va-admin-list li::before {
+  background: #22d3ee;
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.5);
+}
+
+html.gw-ref-site .va-page .va-benefit-pill {
+  border-color: rgba(125, 211, 252, 0.22);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.62) 0%, rgba(10, 15, 30, 0.55) 100%);
+}
+
+html.gw-ref-site .va-page .va-benefit-ic--clock {
+  background: #0369a1;
+}
+
+html.gw-ref-site .va-page .va-benefit-ic--dollar {
+  background: #0e7490;
+}
+
+html.gw-ref-site .va-page .va-task-card {
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+html.gw-ref-site .va-page .va-task-badge {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+html.gw-ref-site .va-page .va-why-icon--shield {
+  background: linear-gradient(135deg, #0369a1, #0284c7);
+}
+
+html.gw-ref-site .va-page .va-step-ico,
+html.gw-ref-site .va-page .va-why-hl--teal {
+  color: #67e8f9;
+}
+
+html.gw-ref-site .va-page .va-audience-cell {
+  background: rgba(15, 23, 42, 0.45);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+html.gw-ref-site .va-page .va-audience-foot,
+html.gw-ref-site .va-page .va-diff-kicker,
+html.gw-ref-site .va-page .va-diff-em,
+html.gw-ref-site .va-page .va-diff-ico {
+  color: #7dd3fc;
+}
+
+html.gw-ref-site .va-page .va-diff-card::after {
+  background: #38bdf8;
+}
+
+html.gw-ref-site .va-page .va-block--cta-mid {
+  background: linear-gradient(160deg, #e0f2fe 0%, #bfdbfe 50%, #93c5fd 100%);
+  border-color: rgba(37, 99, 235, 0.28);
+  box-shadow:
+    0 18px 42px rgba(30, 64, 175, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+html.gw-ref-site .va-page .va-block--cta-mid .va-h2 {
+  color: #0f172a;
+}
+
+html.gw-ref-site .va-page .va-block--cta-mid .va-lead {
+  color: #334155;
+}
+
+html.gw-ref-site .va-page .va-block--cta-mid .va-btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+}
+
+html.gw-ref-site .va-page .va-block--closing {
+  background: linear-gradient(165deg, rgba(14, 52, 81, 0.48) 0%, rgba(15, 23, 42, 0.58) 100%);
+  border-color: rgba(125, 211, 252, 0.25);
+}
+
+html.gw-ref-site:has(#virtual-assistant) .floating-schedule-cta {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 45%, #0369a1 100%);
+  box-shadow: 0 12px 30px rgba(3, 105, 161, 0.36);
+}
+
 /* Legacy-style: left category rail + right administrative detail */
 .va-prof-layout {
   display: grid;
@@ -4624,6 +4861,70 @@ h1 {
 .va-block--cta-mid,
 .va-block--closing {
   text-align: center;
+}
+
+.va-closing-clean {
+  width: min(1100px, 92vw);
+  margin: 28px auto 0;
+  padding: 56px 20px 62px;
+  text-align: center;
+  background: #fff;
+  border-radius: 0;
+}
+
+.va-closing-clean h2 {
+  margin: 0;
+  color: #0f172a;
+  font-family: var(--font-ref-display);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.va-closing-clean p {
+  margin: 20px auto 0;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 56ch;
+}
+
+.va-closing-clean .va-btn-primary {
+  margin-top: 26px;
+  background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%);
+  box-shadow: 0 10px 24px rgba(2, 132, 199, 0.25);
+}
+
+/* Direct override for “Stop spending...” block */
+.va-block--cta-mid {
+  background: #1d4ed8 !important;
+  background-image: none !important;
+  border-color: rgba(191, 219, 254, 0.42) !important;
+  box-shadow:
+    0 18px 42px rgba(37, 99, 235, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+html.gw-ref-site .va-page .va-block--cta-mid {
+  background: #1d4ed8 !important;
+  background-image: none !important;
+}
+
+.va-block--cta-mid .va-h2 {
+  color: #f8fafc !important;
+}
+
+.va-block--cta-mid .va-lead {
+  color: #dbeafe !important;
+}
+
+.va-block--cta-mid .va-btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #0284c7 100%) !important;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28) !important;
 }
 
 .va-block--closing {
@@ -6204,4 +6505,11 @@ h1 {
     max-height: calc(100vh - 130px);
     overflow-y: auto;
   }
+}
+
+/* Final hard override: make the "Stop spending..." rounded block blue */
+html.gw-ref-site .va-page .va-block.va-block--cta-mid {
+  background: #2563eb !important;
+  background-image: none !important;
+  border-color: #93c5fd !important;
 }
