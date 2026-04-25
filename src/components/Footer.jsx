@@ -142,17 +142,6 @@ function Footer({ data, navLinks, services, isScrollActive }) {
 
         <hr className="footer-divider" />
 
-        <p className="footer-image-credits">
-          <span className="footer-image-credits-label">Images sourced from</span>{' '}
-          {data.imageCredits.map((item, i) => (
-            <span key={item.label}>
-              {i > 0 ? ' · ' : null}
-              <a href={item.href} target="_blank" rel="noopener noreferrer">
-                {item.label}
-              </a>
-            </span>
-          ))}
-        </p>
         <p className="footer-copyright">{data.copyright}</p>
       </div>
     </footer>
